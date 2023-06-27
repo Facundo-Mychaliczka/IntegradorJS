@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600&display=swap');
+* {
+    font-family: "titillium web";
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 2;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(64,64,64,1) 16%, rgba(255,255,255,1) 100%);
+}
+
+/* CLASE PARA JS DISPLAY NONE */
+
+.hidden {
+    display: none;
+}
+
+/* -------- */
+
+/* LOGO EN NAVBAR */
+.logoHeader {
+    margin: 20px;
+}
+/* -----*/ 
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* ICONOS DE CUENTA Y DE CARRITO */
+.account-icon,
+.cart-icon {
+    height: 20px;
+    padding: 3px;
+}
+
+/* ICONO HAMBURGUESA DE SMALL DVCS */
+.navicon {
+    display: none;
+}
+/* **** */
+.nav-icons{
+    display: flex;
+    margin: 20px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* CONTENEDOR DE CARRITO DE COMPRAS */
+
+.cart-container {
+    position: absolute;
+    top: 47px;
+    right: 5px;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cart-buy {
+    padding: 5px;
+    background-color: aqua;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cart-remove {
+    padding: 4px;
+    background-color: red;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* -----*/
+
+/* CONTENEDOR DEL NAVEGADOR DE CUENTA */
+.acc-cont { 
+    position: absolute;
+    top: 47px;
+    right: 5px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.835171568627451) 0%, rgba(0,0,0,0.5858718487394958) 100%);
+    padding: 15px;
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+.account-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-cont {
+    display: none;
+}
+
+
+body {
+    background-color: black;
+}
+ main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 60px;
+    gap: 50px;
+ }
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* CONTENEDOR DE FILTROS  */
+
+.filter-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.filter-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+
+
+.filter-container button img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: none;
+}
+
+.active {
+    background-color: orangered;
+    border-radius: 2rem;
+    scale: 1.2;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.product button {
+    color: orangered;
+    padding: 7px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 1rem;
+}
+
+.showMoreBtn {
+    background-color: #007bffa6;
+    padding: 15px;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+/* ABOUT US */
+
+#about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    gap: 50px;
+}
+
+#about-us h3 {
+    border-color: gray;
+    border-style: solid;
+    border-width: 8px;
+    padding: 10px;
+}
+
+#about-us span {
+    color: red;
+}
+
+#about-us h4 {
+    border-color: navy;
+    border-style: solid;
+    border-width: 8px;
+    padding: 10px;
+}
+#about-us h4 p a {
+    padding: 2px;
+    border-radius: 1rem;
+    transition: .25s;
+    text-decoration: underline;
+}
+
+
+
+
+/* FOOTER */
+#footerContainer {
+    margin-top: 50px;
+    background-color: gray;
+    
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: flex-start;
+    padding: 20px;
+}
+
+/* FOOTERNAV */
+
+
+.footerNav li a {
+    transition: 0.25s;
+}
+
+
+/* CONTACTOS */
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.esupport {
+    display: flex;
+    flex-direction: column;
+}
+
+.esupport a {
+    text-decoration: underline;
+}
+
+
+/* PRIVACY */
+
+.privacy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.privacy a {
+    border-left: solid black ;
+    border-right: solid black;
+    padding: 0px 10px;
+}
+

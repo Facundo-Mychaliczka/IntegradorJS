@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AORUS </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="./mediaqueries/extralargedevices.css">
+    <link rel="stylesheet" href="./mediaqueries/largedevices.css">
+    <link rel="stylesheet" href="./mediaqueries/mediumdevices.css">
+    <link rel="stylesheet" href="./mediaqueries/smalldevices.css">
+</head>
+<body>
+    <header>
+        <a href="#hero">
+            <img src="assets/logoHeader.png" alt="logoHeader" class="logoHeader">
+        </a>
+        <nav class="navbar">
+            <div class="navmedium">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#about-us">Conocenos</a></li>
+            </ul>
+            </div>
+            <!-- ICONOS -->
+            <div class="nav-icons">
+                <!-- CART ICON -->
+                <img src="assets/cart-icon.svg" alt="" class="cart-icon">
+                <!-- LOGIN ICON -->
+                <img src="assets/logo-login.png" alt="" class="account-icon">
+                <!-- MENU HAMBURGUESA EN SMALL DEVICES -->
+                <img src="./assets/menuicon.png" alt="" class="navicon">
+            </div>
+            <!-- CARRITO DE COMPRA -->
+            <div class="cart-container hidden ">
+                <div class="cart">
+                    <p>Mi carrito</p>
+                   <p>Total:</p>
+                 <div class="cart-btns">
+                    <button class="cart-buy">
+                        Comprar
+                    </button>
+                    <button class="cart-remove">Eliminar mi carrito</button>
+                  </div>
+                </div>
+            </div>
+            <!-- MENÚ DE LOGIN  -->
+            <div class="acc-cont hidden">
+            <ul class="account-nav">
+                <li><a href="./Account/Login/index.html">Ingresar</a></li>
+                <li><a href="./Account/Register/index.html">Registrarse</a></li>
+            </ul>
+            </div>
+            <div class="nav-cont">
+                <div class="navsmall hidden">
+                   <ul>
+                       <li><a class="navSmallBtn" href="#hero">Home</a></li>
+                       <li><a class="navSmallBtn" href="#productos">Productos</a></li>
+                       <li><a class="navSmallBtn" href="#about-us">Conocenos</a></li>
+                   </ul>
+                </div>
+            </div>
+            
+            <!-- EFECTO DEL FONDO  -->
+            <div class="fondoBlur"></div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <div id="hero">
+            <img src="assets/AorusLog.png" alt="">
+            <h1>AORUS ES UNA EMPRESA LÍDER EN TARJETAS MADRE, TARJETAS GRAFICAS, LAPTOPS, HARDWARE DE JUEGOS Y SISTEMAS DE ALTO RENDIMIENTO.                
+            </h1>
+        </div>
+        <h3 id="productos">¡Conocé nuestros productos!</h3>
+        <div class="filter-container">
+            <button class="filter-btn category active">
+                <img src="./assets/GRAFICAS/AORUS GeForce RTX 4060 ELITE 8GB.png" alt="" class="btnImg">
+                TODOS
+            </button>
+            <button class="filter-btn category" data-category="motherboard">
+                <img src="./assets/gral-filter/mother-gral.png" alt=""  class="btnImg">
+                MOTHERBOARDS
+            </button>
+            <button class="filter-btn category" data-category="grafica">
+                <img src="./assets/gral-filter/grafica-gral.png" alt="" class="btnImg">
+                GRÁFICAS
+                </button>
+            <button class="filter-btn category" data-category="laptop">
+                <img src="./assets/gral-filter/laptop-gral.png" alt="" class="btnImg">
+                LAPTOPS
+                </button>
+                <button class="filter-btn category" data-category="monitor">
+                    <img src="./assets/gral-filter/monitor-gral.png" alt="" class="btnImg">
+                    MONITORES
+                    </button>
+                <button class="filter-btn category" data-category="periferico">
+                    <img src="./assets/gral-filter/perifer-gral.png" alt="" class="btnImg">
+                    PERIFÉRICOS
+                    </button>
+        </div>
+        <!-- PRODUCTOS -->
+        <div class="products-container" id="product-nav">
+            <!-- <div class="product">
+                <img src="assets/gral-filter/grafica-gral.png" alt="">
+                <h3>Grafica</h3>
+                <p>$100USD</p>
+                <p>Garantía de 1 año</p>
+                <button>Añadir al carrito</button>
+            </div> -->
+        </div>
+        <button class="showMoreBtn">VER MÁS</button>
+        <!-- ABOUT US -->
+        <div id="about-us">
+            <h3>ENFOCANDONOS EN LA CALIDAD Y RENDIMIENDO DE NUESTROS PRODUCTOS HIGH PERFORMANCE, <span>AORUS</span> SE CONVIRTIÓ EN UNA MARCA LÍDER EN EL MERCADO GAMING.</h3>
+            <h4>CONTAMOS CON GARANTÍA POR PRODUCTO AL COMPRAR EN LA WEB, JUNTO A ATENCIÓN PERSONALIZADA PARA QUE SIEMPRE ESTÉS EN CONTACTO DIRECTO CON NOSOTROS.
+                <p>Más información en: <a href="https://www.garantiagigabyte.com.ar/">Garantía</a></p>
+            </h4>
+        </div>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <section id="footerContainer">
+        <footer class="footer">
+            <!-- NAV -->
+            <div class="footerNav">
+                <img src="./assets/logoHeader.png" alt="">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#about-us">Conocenos</a></li>
+                </ul>
+            </div>
+            <!-- CONTACT-US -->
+            <div class="contactUs">
+                <div class="esupport">
+                    <strong>Soporte Online:</strong>
+                    <a href="https://esupport.gigabyte.com/Login/Index?ReturnUrl=%2f">ESUPPORT</a>
+                </div>
+                <div class="celphoneContact">
+                    <strong>Soporte Técnico:</strong>
+                    <p>(+5411) 6091-2350</p>
+                </div>
+                <div class="mail">
+                    <strong>E-MAIL:</strong>
+                    <p>rma_argentina@gigabyte.com</p>
+                </div>
+            </div>
+            <div class="privacy">
+                <a href="https://profile.gigabyte.com/TermsOfUse.aspx">Terminos de Uso</a>
+                <a href="https://profile.gigabyte.com/PrivacyPolicy.aspx">Aviso de Privacidad</a>
+            </div>
+        </footer>
+    </section>
+
+    <script src="products.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

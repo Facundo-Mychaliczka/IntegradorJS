@@ -1,0 +1,94 @@
+.navbar ul li a:hover {
+    color: orangered;
+    transition: 0.25s;
+}
+
+.cart-icon:hover, 
+.account-icon:hover {
+    background-color: orangered;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.cart-icon ,
+.account-icon {
+    transition: 0.25s;
+}
+
+/* EFECTO DEL FONDO  */
+.fondoBlur {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1; /*QUEDA ARRIBA DEL BODY, LA NAVEGACION DEL CARRITO Y DE LAS CUENTAS TIENEN Z-INDEX: 2*/
+    /*EFECTO DEL FONDO*/
+    backdrop-filter: blur(10px);
+    display: none;
+  }
+
+  /* DISPLAY DEL FONDO (ESTA EN NONE POR DEFECTO) */
+  .show-fondoBlur {
+    display: block;
+  }
+
+  /* BOTONES DE FILTRO  */
+.filter-btn:hover {
+    background-color: orangered;
+    transform: scale(1.1);
+}
+
+/* PRODUCTOS */
+.product:hover {
+    background-color: #007bffa6;
+    transition: 0.5s;
+    border-radius: 1rem;
+    transform: scale(1.1);
+}
+
+.product {
+    transition: .5s;
+    border-radius: 1rem;
+}
+/* BOTONES DE LOS PRODUCTOS */
+.product button:hover {
+    background-color: orangered;
+    color: black;
+    transition: .5s;
+    transform: scale(1.1);
+}
+.product button {
+    transition: .5s;
+}
+
+/* BOTÓN DE VER MÁS */
+.showMoreBtn:hover {
+    scale: 1.1;
+    transition: 0.25s;
+}
+.showMoreBtn {
+    border: none;
+    transition: 0.25s;
+}
+
+
+/* BOTÓN DE "GARANTÍA" QUE ESTÁ ENCUADRADO EN AZUL*/
+
+#about-us h4 p a:hover {
+    background-color: orangered;
+    border-radius: 1rem;
+    transition: .25s;
+    color: blueviolet;
+}
+
+
+/* FOOTERNAV */
+.footerNav ul li a:hover {
+    color: orangered;
+    transition: 0.25s;
+}
+
+
+    
+
