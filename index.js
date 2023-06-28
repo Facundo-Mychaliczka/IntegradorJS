@@ -74,7 +74,7 @@ const createProductTemplate = (product) => {
     const {id, name, value, garantía, image} = product 
     return `
     <div class="product">
-                <img src="${image}" alt="${name}">
+                <img class="product-img" src="${image}" alt="${name}">
                 <h3>${name}</h3>
                 <p>${value} USD</p>
                 <p>Garantía de ${garantía}</p>

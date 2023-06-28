@@ -1,15 +1,6 @@
-@media (max-width: 577px) {
-
-    html {
-        width: 100vh;
-        max-width: 100%;
-    }
-    body {
-        max-width: 100vh;
-    }
-    main {
-        width: 100%;
-        max-width: 577px;
+@media (min-width: 300px) and (max-width: 577px) {
+    .logoHeader {
+        display: none;
     }
     .navmedium  {
         display: none;
@@ -48,17 +39,24 @@
     }
 
     .products-container {
-        max-width: 100%;
+        width: 50%;
+    }
+    .product-img {
+        width: 90%;
     }
     .product {
         max-width: 100%;
     }
-
+}
+#about-us {
+    display: none;
+}
     #footerContainer {
         max-width: 100%;
     }
 
     footer{
         max-width: 100%;
+        flex-direction: column;
+        text-align: center;
     }
-}
