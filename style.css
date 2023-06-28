@@ -10,6 +10,7 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 header {
@@ -266,7 +267,6 @@ body {
 #footerContainer {
     margin-top: 50px;
     background-color: gray;
-    
 }
 
 .footer {

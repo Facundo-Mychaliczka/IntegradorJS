@@ -1,3 +1,16 @@
-@media (min-width: 290px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 991px) {
+
+    * {
+        max-width: 100vh;
+    }
+    #hero h1 {
+        font-size: 90%;
+        max-width: 100vh;
+    }
+
+    #hero img{
+        max-width: 100vh;
+    }
+
     
 }

@@ -1,3 +1,5 @@
+/* SACO EL LOGO DEL HEADER EN DISP MUY CHICOS  */
+
 @media (max-width: 290px) {
     .logoHeader {
         display: none;
@@ -7,6 +9,8 @@
         justify-content: center;
     }
 }
+
+/* SMALL DVCS */
 
 @media (max-width: 577px) {
     .navmedium  {
