@@ -1,4 +1,4 @@
-@media (min-width: 300px) and (max-width: 577px) {
+@media (min-width: 30px) and (max-width: 577px) {
     .logoHeader {
         display: none;
     }
@@ -48,11 +48,9 @@
         max-width: 100%;
     }
 }
-#about-us {
-    display: none;
-}
+
     #footerContainer {
-        max-width: 100%;
+        max-width: 100vh;
     }
 
     footer{
