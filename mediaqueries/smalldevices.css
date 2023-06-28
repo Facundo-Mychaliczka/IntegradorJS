@@ -1,7 +1,14 @@
-@media (min-width: 30px) and (max-width: 577px) {
+@media (max-width: 290px) {
     .logoHeader {
         display: none;
     }
+    header {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 577px) {
     .navmedium  {
         display: none;
     }
@@ -39,22 +46,28 @@
     }
 
     .products-container {
-        width: 50%;
+        text-align: center;
+        width: 90%;
     }
     .product-img {
-        width: 90%;
+        width: 100%;
     }
     .product {
         max-width: 100%;
     }
-}
 
-    #footerContainer {
-        max-width: 100vh;
+    .products-container h3, 
+    .products-container p{
+        font-size: 70%;
     }
 
-    footer{
-        max-width: 100%;
+    .footer{
         flex-direction: column;
         text-align: center;
+    } 
+    .privacy a {
+        border-top: solid black;
+        border-left: none;
+        border-right: none;
     }
+}
