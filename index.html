@@ -7,8 +7,6 @@
     <title> AORUS </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="./mediaqueries/extralargedevices.css">
-    <link rel="stylesheet" href="./mediaqueries/largedevices.css">
     <link rel="stylesheet" href="./mediaqueries/mediumdevices.css">
     <link rel="stylesheet" href="./mediaqueries/smalldevices.css">
 </head>
@@ -35,16 +33,32 @@
                 <img src="./assets/menuicon.png" alt="" class="navicon">
             </div>
             <!-- CARRITO DE COMPRA -->
-            <div class="cart-container hidden ">
+            <div class="cart-container ">
                 <div class="cart">
-                    <p>Mi carrito</p>
-                   <p>Total:</p>
-                 <div class="cart-btns">
-                    <button class="cart-buy">
-                        Comprar
-                    </button>
-                    <button class="cart-remove">Eliminar mi carrito</button>
-                  </div>
+                  <p>Mi carrito</p>
+                  <div class="items-container">
+                    <!-- EJEMPLO DE PRODUCTO EN EL CART -->
+                   <!-- <div class="cart-item">
+                     <img src="./assets/GRAFICAS/AORUS GeForce RTX 4090 XTREME WATERFORCE 24G.png" alt="" class="cart-item-img">
+                     <div class="item-caract">
+                        <p class="item-name">NOMBRE</p>
+                        <p class="item-value">PRECIO</p>
+                        <p class="item-guarantee">GARANTÍA</p>
+                     </div>
+                     <div class="quantitys-handler">
+                         <p class="quantity-handler down" data-id="ID">-</p>
+
+                         <p class="quantity">CANTIDAD</p>
+
+                         <p class="quantity-handler up" data-id="ID">+</p>
+                     </div>
+                  </div> -->
+                  <!-- FIN DEL EJEMPLO -->
+                  
+                </div>
+                  <p class="cart-total"></p>
+                  <button class="cart-buy">COMPRAR</button>
+                  <button class="cart-remove">VACIAR CARRITO</button>
                 </div>
             </div>
             <!-- MENÚ DE LOGIN  -->
@@ -157,7 +171,7 @@
             </div>
         </footer>
     </section>
-
+    <div class="fedbackCart"></div>
     <script src="products.js"></script>
     <script src="index.js"></script>
 </body>

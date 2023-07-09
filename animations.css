@@ -10,11 +10,38 @@
     transition: 0.25s;
 }
 
+/* CARRITO DE COMRAS */
 .cart-icon ,
 .account-icon {
     transition: 0.25s;
 }
 
+.down:hover {
+    scale: 0.8;
+    transition: 0.25s;
+    background-color: red;
+    border-color: transparent;
+}
+
+.up:hover {
+    scale: 1.2;
+    transition: 0.25s;
+    background-color: green;
+    border-color: transparent;
+}
+.quantity-handler {
+    transition: 0.25s;
+}
+.cart-buy, 
+.cart-remove {
+    cursor: pointer;
+    transition: .25s;
+}
+.cart-buy:hover, 
+.cart-remove:hover {
+    scale:  1.1;
+}
+/****/
 /* EFECTO DEL FONDO  */
 .fondoBlur {
     position: absolute;
