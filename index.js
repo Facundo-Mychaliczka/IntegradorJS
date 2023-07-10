@@ -130,12 +130,23 @@ const quantityCartHandler = (e) => {
 }
 
 const removeLocalCart = () => {
-    if (window.confirm("¿Desea eliminar todo su carrito?")) {
+    if (!carrito.length) {
+        return
+    }else if (window.confirm("¿Desea eliminar todo su carrito?")){
+            carrito = []
+            updateCartState()
+            showSuccesModal("Se han eliminado los productos de su carrito.")
+    }
+}
+
+const successBuy = () => {
+    if (!carrito.length) {
+        return
+    } else if (window.confirm("¿Desea finalizar su compra?")) {
         carrito = []
         updateCartState()
-        showSuccesModal("Se han eliminado los productos de su carrito.")
+        showSuccesModal("¡Muchas gracias por su compra!")
     }
-    
 }
 
 
@@ -405,6 +416,8 @@ let init = () => {
     disableBtn(buyCartBtn)
     disableBtn(removeCartBtn)
     removeCartBtn.addEventListener("click", removeLocalCart)
+    buyCartBtn.addEventListener("click", successBuy)
+    window.addEventListener("scroll", disableNav)
 }
 
 init ();
