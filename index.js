@@ -24,7 +24,9 @@ const productBtn = document.querySelector(".productBtn")
 //----//
 // CONTENEDOR DE LOS PRODUCTOS DEL CART//
 const itemsCart = document.querySelector(".items-container")
+const cartItem = document.querySelector(".cart-item")
 const totalCart = document.querySelector(".cart-total")
+
 
 // BOTONES DEL CARRITO
 const buyCartBtn = document.querySelector(".cart-buy")
@@ -65,13 +67,13 @@ let toggleCart = () => {
 //FUNCIONALIDADES DEL CART//
 
 const createCartProductTemplate = (cartProduct) => {
-    const {id, value, image, name, garantía, quantity} = cartProduct
+    const {id, value, image, name, quantity} = cartProduct
     return `
             <div class="cart-item">
-                <img src=${image}>
+                <img src="${image}">
+                <div class="item-caract">
                     <p class="item-name">${name}</p>
-                    <p class="item-value">${value}</p>
-                    <p class="item-guarantee">${garantía}</p>
+                    <p class="item-value">${value} U$D</p>
                 </div>
                 <div class="quantitys-handler">
                     <p class="quantity-handler down" data-id=${id}>-</p>
@@ -84,8 +86,62 @@ const createCartProductTemplate = (cartProduct) => {
     `
 }
 
+
+const removeCartProduct = (productFromCart) => {
+    carrito = carrito.filter((product) => {
+        return product.id !== productFromCart.id;
+    });
+    showSuccesModal("El producto ha sido eliminado del carrito.")
+    updateCartState();
+}
+
+const removeUnitFromCartProduct = (productFromCart) => {
+    carrito = carrito.map((product) => {
+        return product.id === productFromCart.id
+            ? {...product, quantity: Number(product.quantity - 1)}
+            : product;
+    })
+}
+
+const handleMinusEvent = (id) => {
+    const existingCartProduct = carrito.find((item) =>item.id === id);
+        if (existingCartProduct.quantity === 1) {
+            // Remover el producto del carrito 
+            if (window.confirm("¿Desea eliminar el producto de su carrito?")) {
+                removeCartProduct(existingCartProduct)
+            }
+            return;
+        }
+        removeUnitFromCartProduct(existingCartProduct)
+} 
+
+const handleUpEvent = (id) => {
+    const existingCartProduct = carrito.find((item) => item.id === id)
+    addUnitToCartProduct(existingCartProduct)
+}
+
+const quantityCartHandler = (e) => {
+    if (e.target.classList.contains("down")) {
+        handleMinusEvent(e.target.dataset.id);
+    } else if (e.target.classList.contains("up")) {
+        handleUpEvent(e.target.dataset.id)
+    }
+    updateCartState();
+}
+
+const removeLocalCart = () => {
+    if (window.confirm("¿Desea eliminar todo su carrito?")) {
+        carrito = []
+        updateCartState()
+        showSuccesModal("Se han eliminado los productos de su carrito.")
+    }
+    
+}
+
+
+
 const renderCart = () => {
-    if (!carrito.lenght) {
+    if (!carrito.length) {
         itemsCart.innerHTML = `<p class="empty-cart-msg"> Actualmente, no hay productos en el carrito. </p>`;
         return
     }
@@ -93,8 +149,8 @@ const renderCart = () => {
 }
 
 const createProductData = (product) => {
-    const {id, name, value, image, garantía} = product
-    return {id, name, value, image, garantía}
+    const {id, name, value, image} = product
+    return {id, name, value, image}
 }
 
 const isExistingCartProduct = (productId) => {
@@ -131,7 +187,7 @@ const createCartProduct = (product) => {
 
 // CAMBIAR EL DISABLED DE LOS BOTONES DEL CART
 const disableBtn = (btn) => {
-    if (carrito.length) {
+    if (!carrito.length) {
         btn.classList.add("disabled");
     } else {
         btn.classList.remove("disabled")
@@ -322,7 +378,7 @@ const aplicarFiltro = ({target}) => {
     // CAMBIAR EL ESTADO DEL FILTRO//
     changeFilterState(target);
     // SI HAY FILTRO ACTIVO, RENDERIZO PRODUCTOS FILTRADOS//
-    productContainer.innerHTML = "";
+    productsContainer.innerHTML = "";
     if (appState.activeFilter) {
         renderFilteredProducts();
         appState.currentProductIndex = 0;
@@ -345,8 +401,10 @@ let init = () => {
     document.addEventListener("DOMContentLoaded", renderCart)
     document.addEventListener("DOMContentLoaded", showTotalCart)
     productsContainer.addEventListener("click", addCartProduct)
+    itemsCart.addEventListener("click", quantityCartHandler)
     disableBtn(buyCartBtn)
     disableBtn(removeCartBtn)
+    removeCartBtn.addEventListener("click", removeLocalCart)
 }
 
 init ();
