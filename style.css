@@ -84,8 +84,10 @@ header {
     background: linear-gradient(0deg, rgba(0,0,0,0.835171568627451) 0%, rgba(0,0,0,0.5858718487394958) 100%);
     padding: 20px;
     border-radius: 2rem;
-    overflow: scroll hidden;
+    max-height: 90vh;
+    overflow: auto;
     overflow-x: hidden;
+    margin-bottom: 50px;
 }
 
 .cart {
@@ -130,7 +132,6 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
     gap: 15px;
     border: 1px solid white;
     padding: 10px;

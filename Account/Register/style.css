@@ -68,7 +68,7 @@ body {
  }
 
 
- .loginBtn {
+ .registerBtn {
     padding: 5px;
     background-color: #007bffa6;
     border: none;
@@ -77,12 +77,12 @@ body {
     transition: 0.2s;
  }
 
- .loginBtn:hover {
+ .registerBtn:hover {
     transform: scale(1.1);
     transition: 0.2s;
  }
 
- .toRegister {
+ .toLogin {
     border-bottom: dotted blueviolet;
     color: blueviolet;
  }
