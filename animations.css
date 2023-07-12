@@ -16,6 +16,20 @@
     transition: 0.25s;
 }
 
+.close-cart:hover {
+    transform: scale(1.1);
+    transition: 0.25s;
+}
+
+.trash-cart-img {
+    transition: .25s;
+}
+.trash-cart-img:hover {
+    transform: scale(1.1);
+    transition: .25s;
+}
+
+
 .down:hover {
     scale: 0.8;
     transition: 0.25s;

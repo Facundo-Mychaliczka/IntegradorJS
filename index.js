@@ -29,6 +29,7 @@ const totalCart = document.querySelector(".cart-total")
 
 
 // BOTONES DEL CARRITO
+const closeCart = document.querySelector(".close-cart")
 const buyCartBtn = document.querySelector(".cart-buy")
 const removeCartBtn = document.querySelector(".cart-remove")
 
@@ -76,10 +77,9 @@ const createCartProductTemplate = (cartProduct) => {
                     <p class="item-value">${value} U$D</p>
                 </div>
                 <div class="quantitys-handler">
+                     <img src="./assets/closed-trash-can.png" alt="" class="trash-cart-img" data-id=${id}>
                     <p class="quantity-handler down" data-id=${id}>-</p>
-
                     <p class="quantity">${quantity}</p>
-
                     <p class="quantity-handler up" data-id=${id}>+</p>
                      </div>
             </div>
@@ -87,6 +87,10 @@ const createCartProductTemplate = (cartProduct) => {
 }
 
 
+
+
+
+///////////////////
 const removeCartProduct = (productFromCart) => {
     carrito = carrito.filter((product) => {
         return product.id !== productFromCart.id;
@@ -103,6 +107,19 @@ const removeUnitFromCartProduct = (productFromCart) => {
     })
 }
 
+
+
+// FUNCIONES REPETIDAS (AGREGUE EL BOTON DE BORRAR ARTICULO DESPUÉS, TENÍAS QUE CAMBIAR TODO)
+
+const prueba = (id) => {
+    const existingCartProduct = carrito.find((item) => item.id === id)
+    if (window.confirm("¿Desea eliminar el producto de su carrito?")) {
+        removeCartProduct(existingCartProduct)
+        return;
+    }
+    removeUnitFromCartProduct(existingCartProduct)
+}
+
 const handleMinusEvent = (id) => {
     const existingCartProduct = carrito.find((item) =>item.id === id);
         if (existingCartProduct.quantity === 1) {
@@ -115,6 +132,7 @@ const handleMinusEvent = (id) => {
         removeUnitFromCartProduct(existingCartProduct)
 } 
 
+
 const handleUpEvent = (id) => {
     const existingCartProduct = carrito.find((item) => item.id === id)
     addUnitToCartProduct(existingCartProduct)
@@ -125,6 +143,8 @@ const quantityCartHandler = (e) => {
         handleMinusEvent(e.target.dataset.id);
     } else if (e.target.classList.contains("up")) {
         handleUpEvent(e.target.dataset.id)
+    } else if (e.target.classList.contains("trash-cart-img")) {
+        prueba(e.target.dataset.id)
     }
     updateCartState();
 }
@@ -418,6 +438,9 @@ let init = () => {
     removeCartBtn.addEventListener("click", removeLocalCart)
     buyCartBtn.addEventListener("click", successBuy)
     window.addEventListener("scroll", disableNav)
+    closeCart.addEventListener("click", disableNav)
+
 }
+
 
 init ();
