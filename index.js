@@ -117,7 +117,6 @@ const prueba = (id) => {
         removeCartProduct(existingCartProduct)
         return;
     }
-    removeUnitFromCartProduct(existingCartProduct)
 }
 
 const handleMinusEvent = (id) => {
@@ -439,7 +438,6 @@ let init = () => {
     buyCartBtn.addEventListener("click", successBuy)
     window.addEventListener("scroll", disableNav)
     closeCart.addEventListener("click", disableNav)
-
 }
 
 

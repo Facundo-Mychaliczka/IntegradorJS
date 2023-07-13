@@ -41,6 +41,18 @@
         gap: 5px;
     }
 
+    .cart-item {
+        flex-direction: column;
+    }
+
+    .item-caract {
+        text-align: center;
+    }
+    .quantitys-handler {
+        align-items: center;
+        justify-content: center;
+    }
+
     #hero h1 {
         width: 100%;
     }
