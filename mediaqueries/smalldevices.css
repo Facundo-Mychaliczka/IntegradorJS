@@ -40,6 +40,10 @@
         align-items: center;
         gap: 5px;
     }
+    .cart-container {
+        max-height: 80vh;
+        border-bottom: solid orangered;
+    }
 
     .cart-item {
         flex-direction: column;
