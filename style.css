@@ -83,6 +83,7 @@ header {
     z-index: 2;
     background: linear-gradient(0deg, rgba(0,0,0,0.835171568627451) 0%, rgba(0,0,0,0.5858718487394958) 100%);
     padding: 20px;
+    border-bottom: solid orangered;
     border-radius: 2rem;
     max-height: 90vh;
     overflow: auto;
