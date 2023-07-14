@@ -111,7 +111,7 @@ const removeUnitFromCartProduct = (productFromCart) => {
 
 // FUNCIONES REPETIDAS (AGREGUE EL BOTON DE BORRAR ARTICULO DESPUÉS, TENÍAS QUE CAMBIAR TODO)
 
-const prueba = (id) => {
+const deleteTrash = (id) => {
     const existingCartProduct = carrito.find((item) => item.id === id)
     if (window.confirm("¿Desea eliminar el producto de su carrito?")) {
         removeCartProduct(existingCartProduct)
@@ -143,7 +143,7 @@ const quantityCartHandler = (e) => {
     } else if (e.target.classList.contains("up")) {
         handleUpEvent(e.target.dataset.id)
     } else if (e.target.classList.contains("trash-cart-img")) {
-        prueba(e.target.dataset.id)
+        deleteTrash(e.target.dataset.id)
     }
     updateCartState();
 }
